@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>掘金Avatar小彩蛋</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f3f4f4;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            width: 700px;
+            height: 158px;
+            background: #fff;
+            border-radius: 2px;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .05);
+        }
+
+        .avatarbox {
+            width: 158px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar{
+            display: inline-block;
+            border-radius: 50%;
+            background: #f3f4f4;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+        }
+
+        .name {
+            font-size: 24px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .skill,
+        .description {
+            color: #72777b;
+            margin-bottom: 6px;
+        }
+
+        /* 旋转动画 */
+        .avatarimg:hover {
+            animation: avatarSpin 3s ease-in;
+            animation-iteration-count: 1;
+        }
+        .avatar:hover {
+            animation: avatarSpin 1s linear ;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes avatarSpin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(3600deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <div class="avatarbox">
+            <div class="avatarimg">
+                <img src="https://user-gold-cdn.xitu.io/2017/12/25/1608e5163143a9f1?imageView2/1/w/90/h/90/q/85/format/webp/interlace/1"
+                   class="avatar">
+            </div>
+        </div>
+        <div class="info">
+            <span class="name">掘金小彩蛋</span>
+            <span class="skill">design&code</span>
+            <span class="description">设计代码一手抓</span>
+        </div>
+    </div>
+</body>
+
+</html>
