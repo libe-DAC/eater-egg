@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background: #f3f4f4;
@@ -19,6 +20,7 @@
             flex-direction: row;
             justify-content: left;
             align-items: center;
+            margin-bottom: 20px;
             width: 700px;
             height: 158px;
             background: #fff;
@@ -34,7 +36,7 @@
             align-items: center;
         }
 
-        .avatar{
+        .avatar {
             display: inline-block;
             border-radius: 50%;
             background: #f3f4f4;
@@ -60,16 +62,31 @@
         }
 
         /* 旋转动画 */
+
         .avatarimg:hover {
-            animation: avatarSpin 3s ease-in;
+            animation: avatar02Spin 3s ease-in;
             animation-iteration-count: 1;
         }
-        .avatar:hover {
-            animation: avatarSpin 1.5s linear ;
+
+        #avatar01:hover {
+            animation: avatar01Spin 60s ease-in-out;
+            /* animation-delay: 3s; */
+            animation-iteration-count: 1;
+        }
+        #avatar02:hover {
+            animation: avatar02Spin 1.5s linear;
             animation-delay: 3s;
             animation-iteration-count: infinite;
         }
-        @keyframes avatarSpin {
+        @keyframes avatar01Spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(152000deg);
+            }
+        }
+        @keyframes avatar02Spin {
             from {
                 transform: rotate(0deg);
             }
@@ -83,13 +100,24 @@
 <body>
     <div class="profile">
         <div class="avatarbox">
+                <img src="https://user-gold-cdn.xitu.io/2017/12/25/1608e5163143a9f1?imageView2/1/w/90/h/90/q/85/format/webp/interlace/1"
+                    id="avatar01">
+            </div>
+        <div class="info">
+            <span class="name">掘金动画持续60s</span>
+            <span class="skill">design&code</span>
+            <span class="description">掘金avatar小彩蛋~</span>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="avatarbox">
             <div class="avatarimg">
                 <img src="https://user-gold-cdn.xitu.io/2017/12/25/1608e5163143a9f1?imageView2/1/w/90/h/90/q/85/format/webp/interlace/1"
-                   class="avatar">
+                    id="avatar02">
             </div>
         </div>
         <div class="info">
-            <span class="name">系射鸡狮啊</span>
+            <span class="name">无限</span>
             <span class="skill">design&code</span>
             <span class="description">掘金avatar小彩蛋~</span>
         </div>
